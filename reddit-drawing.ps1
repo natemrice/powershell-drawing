@@ -1,5 +1,5 @@
 [void] [System.Reflection.Assembly]::LoadWithPartialName('System.drawing') 
-$BitMap = [System.Drawing.Bitmap]::FromFile((Get-Item ".\index.png").fullname) 
+$BitMap = [System.Drawing.Bitmap]::FromFile((Get-Item ".\powershell-reddit-small.png").fullname) 
 
 $ansi_escape = [char]27
 
