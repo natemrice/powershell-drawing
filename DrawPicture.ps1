@@ -31,3 +31,5 @@ Foreach($y in (0..($BitMap.Height-1))){
 	}
 	Write-Host ""
 }
+
+$BitMap.dispose()
