@@ -1,4 +1,7 @@
-$BitMap = [System.Drawing.Bitmap]::FromFile((Get-Item ".\powershell-reddit-small.png").fullname) 
+[void] [System.Reflection.Assembly]::LoadWithPartialName('System.drawing') 
+$BitMap = [System.Drawing.Bitmap]::FromFile((Get-Item ".\index.png").fullname) 
+
+$ansi_escape = [char]27
 
 Function DrawColor{
 	param([decimal]$r, [decimal]$g, [decimal]$b)
