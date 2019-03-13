@@ -7,7 +7,13 @@ You can just run the included reddit-drawing.ps1 or use the DrawPicture.ps1 file
   or
 
 	.\DrawPicture.ps1 -path C:\full\path\picture.png
+	
+You can also render any image from the web with the DrawPicture-FromWeb.ps1 like so:
+
+	.\DrawPicture-FromWeb.ps1 https://addons.thunderbird.net/user-media/addon_icons/347/347802-64.png?modified=1322749240
 
 Enjoy.
 
 <img src="https://raw.githubusercontent.com/natemrice/reddit-powershell-drawing/master/console.png"></img>
+
+<img src="https://raw.githubusercontent.com/natemrice/reddit-powershell-drawing/master/console-fromweb.png"></img>
