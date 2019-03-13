@@ -13,7 +13,7 @@ param([String] [parameter(mandatory = $true)] $path)
 $BitMap = [System.Drawing.Bitmap]::FromFile((Get-Item $path).fullname) 
 
 $ansi_escape = [char]27
-
+$color_string = ""
 Function DrawColor{
 	param([decimal]$r, [decimal]$g, [decimal]$b)
 
@@ -21,13 +21,16 @@ Function DrawColor{
 	$text = " "
 	$ansi_terminate = "$ansi_escape[0m"
 	$out = $ansi_command + $text + $ansi_terminate
-	write-host -nonewline $out
+	$script:color_string += $out
 }
 
-Foreach($y in (0..($BitMap.Height-1))){ 
+Foreach($y in (0..($BitMap.Height-1))){ 	
+	if ($y % 2) {continue} else {$color_string += "`n"}
 	Foreach($x in (0..($BitMap.Width-1))){ 
 		$Pixel = $BitMap.GetPixel($X,$Y)         
 		DrawColor -r $($Pixel).R -g $($Pixel).G -b $($Pixel).B
 	}
-	Write-Host ""
 }
+
+$color_string
+
