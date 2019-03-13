@@ -23,8 +23,8 @@ Function DrawColor{
 	write-host -nonewline $out
 }
 
-Foreach($y in (1..($BitMap.Height-1))){ 
-	Foreach($x in (1..($BitMap.Width-1))){ 
+Foreach($y in (0..($BitMap.Height-1))){ 
+	Foreach($x in (0..($BitMap.Width-1))){ 
 		$Pixel = $BitMap.GetPixel($X,$Y)         
 		DrawColor -r $($Pixel).R -g $($Pixel).G -b $($Pixel).B
 	}
