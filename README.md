@@ -17,3 +17,9 @@ Enjoy.
 <img src="https://raw.githubusercontent.com/natemrice/reddit-powershell-drawing/master/console.png"></img>
 
 <img src="https://raw.githubusercontent.com/natemrice/reddit-powershell-drawing/master/console-fromweb.png"></img>
+
+Here's a demo of it in action:
+
+<video controls>
+<source type="video/mp4" src="https://raw.githubusercontent.com/natemrice/reddit-powershell-drawing/master/demo.mp4">
+</video>
